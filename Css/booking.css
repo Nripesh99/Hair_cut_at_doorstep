@@ -1,0 +1,88 @@
+
+  
+  .table {
+    display: flex;
+    border: 1px solid #ce9f9f;
+    padding: 10px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.photo {
+    margin-left: auto;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+}
+.table {
+    display:inline-block;
+    flex-direction: row;
+    border: 1px solid #ce9f9f; /* Add a border with 1px width and black color */
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    
+    
+  }
+  
+  .product {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .description {
+    flex: 1;
+
+        font-size: 20px;
+        padding-left: 0px;
+        padding-top: 0px;
+        
+        
+      
+    
+  }
+  
+  .photo {
+    float: right; /* Adjust the margin as needed */
+
+  }
+.img{
+    
+        max-width: 40%;
+        max-height:30%;
+       float:right; 
+}
+  
+  .photo a img {
+    max-width: 100%;
+    height: auto;
+  }
+  .button {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+.confirm{
+  height: 5rem;
+  width: 3rem;
+  border: 1px solid black;
+}

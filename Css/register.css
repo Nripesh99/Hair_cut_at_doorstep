@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+  }
+
+  .box {
+    flex: 1;
+    padding: 20px;
+    background-color: lightgray;
+    cursor: pointer;
+  }

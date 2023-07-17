@@ -1,0 +1,779 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* =============ScrollBar Section===================== */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+
+/* =============ScrollBar Section End===================== */
+
+/* Global Settings */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 1000px;
+}
+
+p {
+    font-family: 300;
+    color: #111;
+}
+
+section {
+    padding: 100px;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/* =============Header Section===================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+
+header.sticky {
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+}
+
+header.sticky .logo {
+    color: #111;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+
+header.sticky .navigation li a {
+    color: #111;
+}
+
+header .navigation li a:hover,
+header .navigation li a.active {
+    color: #ff0157;
+}
+
+
+
+/* =============Header Section End===================== */
+
+/* =============Banner Section===================== */
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/home-bg2.jpg');
+    background-size: cover;
+}
+
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.banner .content h2 {
+    font-size: 4em;
+    color: #fff;
+}
+
+.banner .content p {
+    font-size: 1em;
+    color: #fff;
+}
+
+.btn {
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 0 #D80286;
+    -webkit-transition: ease-out 0.6s;
+    -moz-transition: ease-out 0.6s;
+    transition: ease-out 0.6s;
+}
+
+.btn:hover {
+    box-shadow: inset 400px 0 0 0 #ff0156;
+}
+
+/* =============Banner Section End===================== */
+
+/* =============About Section===================== */
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50 {
+    position: relative;
+    width: 48%;
+}
+
+.row1 {
+    margin-top: 20px;
+}
+
+.titleText {
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+.col50 p{
+    text-align: justify;
+}
+
+.titleText span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.row .col50.imgBox {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+
+.row .col50 .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =============About Section End===================== */
+
+/* =============Service Section===================== */
+.service .content {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+}
+
+.service .content .box {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.service .content .box .imgBox {
+    margin: 0 auto;
+}
+
+.service .content .box .imgBox img {
+    height: 50px;
+    width: auto;
+}
+
+.service .content .box .text {
+    padding: 15px 0 5px;
+    text-align: center;
+}
+
+/* =============Service Section End ===================== */
+
+/* =============Pricing Section===================== */
+.title{
+    width: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.price .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.price .content .box{
+    width: 340px;
+    margin: 20px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.5);
+}
+.price .content .box .imgBox{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transition: 1s;
+}
+.price .content .box .imgBox:hover{
+    background-color: #ff0157;
+}
+.price .content .box .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.price .content .box .text{
+    margin-top: 10px;
+    text-align: center;
+}
+.price .content .box .text h3{
+    font-weight: 400;
+}
+.price .content .box .text p{
+    font-weight: bold;
+}
+
+/* =============Pricing Section End ===================== */
+
+/* =============Testimonials Section===================== */
+.testimonials {
+    background: url(../image2.jpg);
+    background-size: cover;
+}
+
+.white .titleText,
+.white p {
+    color: #fff;
+}
+
+.testimonials .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.testimonials .content .box {
+    width: 340px;
+    margin: 20px;
+    padding: 40px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.testimonials .content .box .imgBox {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonials .content .box .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.testimonials .content .box .text {
+    text-align: center;
+}
+
+.testimonials .content .box .text p {
+    color: #666;
+    font-style: italic;
+}
+
+.testimonials .content .box .text h3 {
+    margin-top: 20px;
+    color: #111;
+    font-size: 1em;
+    color: #ff0157;
+    font-weight: 600;
+}
+
+/* =============Testimonials Section End===================== */
+
+/*================Contact Section ================*/
+
+.contact {
+    width: 100%;
+    margin: auto;
+}
+
+.contact-col {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div .fa {
+    font-size: 20px;
+    color: #ff0157;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-col div p {
+    padding: 0;
+}
+
+.contact-col div h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col input,
+.contact-col textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.send_btn {
+    border: 1px solid #ff0157;
+    background: transparent;
+    color: #ff0157;
+    padding: 12px 30px;
+}
+
+.send_btn:hover {
+    background: #ff0157;
+    color: #fff;
+}
+
+/*================Contact Section End================*/
+
+/*========== Footer Section  ==========*/
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.footer_logo {
+    font-size: 16px;
+    color: #ff0157;
+    ;
+    font-weight: 600;
+}
+
+.footer_description {
+    display: block;
+    font-size: 16px;
+    margin: 4px 0 24px;
+}
+
+.footer_social {
+    font-size: 1.5rem;
+    color: #393939;
+    margin-right: 16px;
+}
+
+.footer_title {
+    font-size: 20px;
+    color: #393939;
+    margin-bottom: 16px;
+}
+
+.footer_title ul li {
+    color: #393939;
+}
+
+.footer_content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_link {
+    display: inline-block;
+    color: #707070;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer_link1 {
+    color: #707070;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer_link:hover {
+    color: #ff0157;
+}
+
+
+.copyrightText {
+    padding: 8px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.copyrightText p {
+    color: #333;
+}
+
+.copyrightText a {
+    color: #ff0157;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.arrow {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9;
+}
+
+.arrow a {
+    height: 39px;
+    width: 37px;
+    text-align: center;
+    background: #ff0157;
+    display: block;
+    border-radius: 3px;
+}
+
+.arrow a span {
+    color: #f2f2f2;
+    font-size: 25px;
+    line-height: 39px;
+    cursor: pointer;
+}
+
+/* =============Footer Section End ===================== */
+/* =============Form Section===================== */
+.container_form {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+.wrapper h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: #4070f4;
+}
+
+.wrapper form {
+    margin-top: 30px;
+}
+
+.wrapper form .input-box {
+    height: 52px;
+    margin: 18px 0;
+}
+
+form .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #4070f4;
+}
+
+form .policy {
+    display: flex;
+    align-items: center;
+}
+
+form h3 {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.input-box.button input {
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: #4070f4;
+    cursor: pointer;
+}
+
+.input-box.button input:hover {
+    background: #0e4bf1;
+}
+
+form .text h3 {
+    color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+form .text h3 a {
+    color: #4070f4;
+    text-decoration: none;
+}
+
+form .text h3 a:hover {
+    text-decoration: underline;
+}
+
+/* =============Form Section End ===================== */
+
+
+/* =============Responsive Section  ===================== */
+
+@media(max-width:991px) {
+
+    header,
+    header.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    header .navigation li {
+        margin-left: 0;
+    }
+
+    header .navigation li a {
+        color: #111;
+        font-size: 1.6em;
+    }
+
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(../images/menu-bar.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .menuToggle.active {
+        background: url(../images/close-bar.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    header.sticky .menuToggle {
+        filter: invert(1);
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .banner .content h2 {
+        font-size: 3em;
+        color: #fff;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row .col50 {
+        position: relative;
+        width: 100%;
+    }
+
+    .row .col50 .imgBox {
+        height: 300px;
+        margin-top: 20px;
+    }
+    .price .content{
+        margin-top: 20px;
+    }
+    .price .contact .box{
+        margin: 10px;
+    }
+    .price .contact .box{
+        height: 260px;
+    }
+    .price .content .box .text h3 {
+        text-align: center;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .titleText {
+        font-size: 1.8em;
+        line-height: 1.5em;
+        margin-bottom: 15px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .col50 p{
+        margin-bottom: 20px;
+    }
+
+    .service .content {
+        flex-wrap: wrap;
+
+    }
+
+    .testimonials .content .box {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .contactForm {
+        padding: 35px 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .footer {
+        display: block;
+        margin-left: 50px;
+        width: 30%;
+    }
+}
+
+/* =============Responsive Section End===================== */
