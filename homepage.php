@@ -85,7 +85,7 @@ include "dbconfig.php";
                 </div>
                 <div class="text">
                     <h3>Haircuts and Styling</h3>
-                    <p>Once we get your order, we pickup your clothes from your home.</p>
+                   
                 </div>
             </div>
 
@@ -95,7 +95,7 @@ include "dbconfig.php";
                 </div>
                 <div class="text">
                     <h3>Hair Coloring and Highlights</h3>
-                    <p>We wash your clothes using our advanced washing machines.</p>
+                  
                 </div>
             </div>
 
@@ -105,7 +105,7 @@ include "dbconfig.php";
                 </div>
                 <div class="text">
                     <h3>Hair Treatments and Care</h3>
-                    <p>We fold and pack your clothes and deliver to your home safely.</p>
+                    
                 </div>
             </div>
         </div>
