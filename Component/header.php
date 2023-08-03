@@ -32,7 +32,7 @@
             <li><a href="homepage.php#price" onclick="toggleMenu();">Pricing</a></li>
             <li><a href="homepage.php#testimonials" onclick="toggleMenu();">Testimonials</a></li>
             <li><a href="homepage.php#contact" onclick="toggleMenu();">Contact</a></li>
-            
+           <li><a href="customer/c_dashboard.php">C_Dashboard</a></li>
             <li><a href="booking.php" onclick="toggleMenu();">Booking</a></li>           
             <li><a href="logout.php" onclick="toggleMenu();">Logout</a></li>
         </nav>

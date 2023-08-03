@@ -47,7 +47,7 @@ if (isset($_POST['Register'])) {
     $time = $_POST['time'];
     //for file
     $image_link = $_FILES['file'];
-    $file_upload_path = 'hair_cut_at_doorstep/upload/';
+    $file_upload_path = '../upload/';
     $file_name = $image_link['name'];
     $file_temp = $image_link['tmp_name'];
 

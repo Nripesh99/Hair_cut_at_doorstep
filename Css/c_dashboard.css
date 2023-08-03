@@ -1,63 +1,96 @@
+/* Global Styles */
 * {
-    /* border: 1px solid red; */
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-  }
-  body {
-    background-color: #363949;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #363949;
+}
+
+/* Dashboard Container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Main Content Area */
+.main {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.main .top {
+  background-color: #9ab2df;
+  padding: 10px;
+  width: 97.5%;
+}
+
+.main .top h1 {
+  color: #fff;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 15rem;
+  padding: 10px;
+  height: 5rem;
+  background-color: #9ab2df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card h3 {
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Middle Section */
+.middle {
+  margin-top: 20px;
+  display: flex;
+}
+
+.middle .card {
+  margin-left: 10rem;
+  margin-top: 5rem;
+}
+
+/* Bottom Section */
+.bottom {
+  margin-top: 20px;
+  display: flex;
+}
+
+.bottom .card {
+  margin-left: 10rem;
+  margin-top: 5rem;
+}
+
+/* Anchor Tags */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .container {
-    display: grid;
-    grid-template-columns: (2, 1fr);
+    grid-template-columns: 1fr;
   }
-  
-  .main {
-    margin-top: 10px;
-    width: 100%;
+
+  .middle, .bottom {
+    flex-direction: column;
   }
-  .main .top {
-    background-color: #9ab2df;
-    padding: 10px;
-    width: 97.5%;
+
+  .middle .card, .bottom .card {
+    margin-left: 0;
+    margin-top: 1.5rem;
   }
-  .main .top h1 {
-    color: #fff;
-  }
-  .card {
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 15rem;
-    padding: 10px;
-    height: 5rem;
-    background-color: #9ab2df;
-  }
-  .card h3 {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    font-weight: 800;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #fff;
-    margin-top: 25px;
-  }
-  
-  .middle {
-    margin-top: 20px;
-    display: flex;
-  }
-  .middle .card {
-    margin-left: 10rem;
-    margin-top: 5rem;
-  }
-  .bottom {
-    margin-top: 20px;
-    display: flex;
-  }
-  .bottom .card {
-    margin-left: 10rem;
-    margin-top: 5rem;
-  }
-  a{
-    text-decoration: none;
-  }
-  
+}
