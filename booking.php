@@ -16,54 +16,55 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="../hair_cut_at_doorstep/Css/style.css">
     <link rel="icon" href="./images/icon1.png" type="image/icon type">
     <link rel="stylesheet" href="./Css/fontawesome/css/all_min.css">
-    
+
 </head>
 <style>
     body {
-        background-color:wheat;
+        background-color: wheat;
         padding-top: 50px;
     }
-   
+
     .product-container {
-         display: flex;
+        display: flex;
         align-items: center;
-         text-align: center;
-         margin-top: 30px;
+        text-align: center;
+        margin-top: 30px;
         margin-bottom: 20px;
-         margin-bottom: 20px;
-         border-bottom: 5px solid #ccc;
+        margin-bottom: 20px;
+        border-bottom: 5px solid #ccc;
         padding-bottom: 20px;
-        }
+    }
 
-        .product-description {
-            flex: 1;
-            text-align: left;
-            padding-right: 50px;
-            flex-direction: column;
-        }
+    .product-description {
+        flex: 1;
+        text-align: left;
+        padding-right: 50px;
+        flex-direction: column;
+    }
 
-        .product-description h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
+    .product-description h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
 
-        .product-description p {
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
+    .product-description p {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
 
-        .product-image {
-            position: relative;
-        }
+    .product-image {
+        position: relative;
+    }
 
-        .product-image img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .book-button {
+    .product-image img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .book-button {
         padding: 12px 24px;
         background-color: #007bff;
         color: #fff;
@@ -77,18 +78,16 @@ if (!isset($_SESSION['email'])) {
         display: block;
         margin-top: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
+    }
 
-.book-button:hover {
-  background-color: #0056b3;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
+    .book-button:hover {
+        background-color: #0056b3;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
 
-.book-button:active {
-  transform: translateY(1px);
-}
-
-
+    .book-button:active {
+        transform: translateY(1px);
+    }
 </style>
 
 
@@ -97,8 +96,8 @@ if (!isset($_SESSION['email'])) {
     <?php
     //Database connection
     include './dbconfig.php';
-    
-    include 'Component/header.php'; 
+
+    include 'Component/header.php';
 
     // Prepare and execute the SQL query
     $serviceQuery = "SELECT s_id, s_name, s_price, s_time, s_image FROM services";
@@ -127,14 +126,24 @@ if (!isset($_SESSION['email'])) {
             <?php $a = $row['s_image']; ?>
             <div class="product-image">
                 <img src="<?php echo $a ?>" alt="Services">
-                <!-- <a href="#" class="book-button">Book Now</a> -->
-                <a href="customer/booking_now.php?id=<?php echo $row['s_id']; ?>" class="book-button">Book Now</a>
-                <!--Change today 7/5/2023 -->
-
+                <a href="javascript:void(0);" onclick="confirmBooking(<?php echo $row['s_id']; ?>)" class="book-button">Book
+                    Now</a>
             </div>
+
+            <script>
+                function confirmBooking(serviceId) {
+                    if (confirm("Are you sure you want to book this service?")) {
+                        window.location.href = "customer/booking_now.php?id=" + serviceId;
+                    }
+                }
+            </script>
+
         </div>
     <?php } ?>
-    <?php include 'Component/footer.php' ; ?>
+    <?php include 'Component/footer.php'; ?>
 </body>
-<footer><?php ?></footer>
+<footer>
+    <?php ?>
+</footer>
+
 </html>
