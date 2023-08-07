@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="hair_cut_at_doorstep/Css/aregister.css">
+    <link rel="stylesheet" href="../Css/aregister.css">
 </head>
 
 <body class="container">
     <div class="logo">
-        <image src="logo.png"></image><br><br>
+        <image  src="../logo1234.png"  width="150" height="150"></image><br><br>
     </div>
-    <p>Regsister As Customer</p>
+    <p>Regsister As Agent</p>
     <div>
         <form class="form" method="post" action="add_agent.php">
             <label for="name">Name:</label>
@@ -61,7 +61,7 @@ if (isset($_POST['Register'])) {
         //  header("Location:login.php");
 
         echo "Succesfully register";
-        header('location:../admin/index.php');
+        header('location:../admin/a_agent.php');
         exit();
         
     } else {

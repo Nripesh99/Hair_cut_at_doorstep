@@ -14,7 +14,7 @@ $agentQuery = "SELECT * FROM agent_register where Email= '$email'";
 $agentResult = mysqli_query($connect, $agentQuery);
 $a_row = mysqli_fetch_assoc($agentResult);
 $a_Id = $a_row['a_Id'];
-echo $a_Id;
+
 $bookingQuery = "SELECT * FROM booking_test";
 $bookingResult = mysqli_query($connect, $bookingQuery);
 ?>
@@ -59,6 +59,10 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
         font-weight: bold;
         margin-bottom: 10px;
     }
+
+    caption {
+        text-align: center;
+    }
 </style>
 
 <body>
@@ -87,11 +91,12 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
         }
         ?>
         <div class="content">
+            <caption>Accepted Bookings <h3> in
+                    <?php echo $today; ?>
+                </h3>
+            </caption>
             <table>
-                <caption>Accepted Bookings <h3>  in
-                        <?php echo $today; ?>
-                    </h3>
-                </caption>
+
                 <tr>
                     <th>S.no</th>
                     <th>Booking ID</th>
@@ -143,9 +148,20 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
                         <td>
                             <?php echo $row1['a_Id']; ?>
                         </td>
-                        <td><a class='btn'
-                                href="complete.php?id=<?php echo $row1['b_id']; ?>&aId=<?php echo $row1['a_Id']; ?>">Complete</a>
+                        <td>
+                            <a class="btn" href="#"
+                                onclick="confirmComplete(<?php echo $row1['b_id']; ?>, <?php echo $row1['a_Id']; ?>)">Complete</a>
                         </td>
+
+                        <script>
+                            function confirmComplete(bookingId, aId) {
+                                if (confirm("Are you sure you want to mark this booking as complete?")) {
+                                    window.location.href = "complete.php?id=" + bookingId + "&aId=" + aId;
+                                }
+                            }
+                        </script>
+
+
                     </tr>
                 <?php } ?>
             </table>

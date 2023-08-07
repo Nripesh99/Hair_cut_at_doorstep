@@ -14,7 +14,6 @@ $agentQuery = "SELECT * FROM agent_register where Email= '$email'";
 $agentResult = mysqli_query($connect, $agentQuery);
 $a_row = mysqli_fetch_assoc($agentResult);
 $a_Id = $a_row['a_Id'];
-echo $a_Id;
 $bookingQuery = "SELECT * FROM booking_test";
 $bookingResult = mysqli_query($connect, $bookingQuery);
 ?>
@@ -74,8 +73,8 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
         <div class="content">
             <!--For completed -->
             <table>
-                <caption>completed Bookings of  customer<h3> 
-                    </h3>
+                <caption>completed Bookings of  customer<h2> 
+                    </h2>
                 </caption>
                 <tr>
                     <th>S.no</th>

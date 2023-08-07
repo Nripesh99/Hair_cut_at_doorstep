@@ -57,26 +57,28 @@ if (!isset($_SESSION['email'])) {
             ?>
         </div>
         <?php
-        $agentQuery = "SELECT * FROM agent_register";
+        $agentQuery = "SELECT * FROM customer_register";
         $agentResult = mysqli_query($connect, $agentQuery);
         ?>
         <!-- Agent table starts -->
         
         <div class='content'>
-        <h2 style="color:black; text-align:center;" >Agent Table</h2>
-        <a class="btn" href="add_agent.php">Add Agent</a>
+        <h2 style="color:black; text-align:center;" >Customer Table</h2>
             <table>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Phone</th>
+                    <th>Mobile_no</th>
+                    <th>location</th>
+                    <th>Inside valley</th>
+                    
                     <th colspan="2" style="text-align:center">Activity</th>
                 </tr>
                 <?php while ($row = mysqli_fetch_assoc($agentResult)) { ?>
                     <tr>
                         <td>
-                            <?php echo $row['a_Id']; ?>
+                            <?php echo $row['Id']; ?>
                         </td>
                         <td>
                             <?php echo $row['Name']; ?>
@@ -87,11 +89,12 @@ if (!isset($_SESSION['email'])) {
                         <td>
                             <?php echo $row['Mobile_no']; ?>
                         </td>
-                        <td><a class='btn' href="edit_agent.php?id=<?php echo $row['a_Id']; ?>">Edit</a></td>
-                        <!-- <td><a href="view.php?id=<?php echo $row['a_Id']; ?>">View</a></td> -->
-                        <td><a class='btn' href="delete_agent.php?id=<?php echo $row['a_Id']; ?>">Delete</a></td>
-
-                    </tr>
+                        <td>
+                            <?php echo $row['location']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['Inside_valley']; ?>
+                        </td>
                 <?php } ?>
             </table>
         </div>

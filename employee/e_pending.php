@@ -137,9 +137,19 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
                         <td>
                             <?php echo $row['status']; ?>
                         </td>
-                        <td><a class='btn'
-                                href="accept.php?id=<?php echo $row['b_id']; ?>&aId=<?php echo $a_row['a_Id']; ?>">Accept</a>
+                        <td>
+                            <a class="btn" href="javascript:void(0);"
+                                onclick="confirmAccept(<?php echo $row['b_id']; ?>, <?php echo $a_row['a_Id']; ?>)">Accept</a>
                         </td>
+
+                        <script>
+                            function confirmAccept(bId, aId) {
+                                if (confirm("Are you sure you want to accept this booking?")) {
+                                    window.location.href = "accept.php?id=" + bId + "&aId=" + aId;
+                                }
+                            }
+                        </script>
+
                     </tr>
                 <?php } ?>
             </table>
