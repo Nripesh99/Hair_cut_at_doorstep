@@ -12,30 +12,41 @@
   <link rel="stylesheet" type="text/css" href="../Css/c_dashboard.css?=1">
 </head>
 <style>
-  .component {
-    display: flex;
-  }
-
-
-  .sidebar {
-    flex: 0 0 0%;
-    /* Adjust the width as needed */
-  }
-
-  .table-container {
-    flex: 1;
-    padding: 0px;
-  }
- 
-    .wrapper{
-      display: flex;
-
+    .wrapper {
+        display: flex;
     }
-  
+
+    .sidebar {
+        width: 20%;
+        background-color: #f1f1f1;
+        padding: 0px;
+    }
+
+    .content {
+        width: 80%;
+        padding: 30px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table th,
+    table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    table caption {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 </style>
 
 <body>
   <div class="wrapper">
+
     <?php
     include "../dbconfig.php";
 
@@ -66,13 +77,13 @@
 
     }
     ?>
-    <div class="component">
 
-      <header>
-        <?php
-        include '../Component/c_sidebar.php';
-        ?>
-      </header>
+    <div class='sidebar'>
+      <?php
+      include '../Component/c_sidebar.php';
+      ?>
+    </div>
+    <div class='content'>
       <!--Completed booking table  -->
       <table>
         <caption>

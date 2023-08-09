@@ -9,49 +9,76 @@
 
 
   <style>
-    .wrapper{
+    .wrapper {
       display: flex;
+    }
 
+    .sidebar {
+      width: 20%;
+      background-color: #f1f1f1;
+      padding: 0px;
+    }
+
+    .content {
+      width: 80%;
+      padding: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    table caption {
+      font-weight: bold;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 
 <body>
-  <?php
-  include '../dbconfig.php';
-  $c_id = $_GET['c_id'];
-  $today = date('Y-m-d');
-  // Separate bookings based on status
-  $pendingBookings = array();
-  $acceptedBookings = array();
-  $rejectedBookings = array();
-  //selecting data from database 
-  $bookingQuery = "SELECT * FROM booking_test WHERE id='$c_id'";
+  <div class='wrapper'>
+    <?php
+    include '../dbconfig.php';
+    $c_id = $_GET['c_id'];
+    $today = date('Y-m-d');
+    // Separate bookings based on status
+    $pendingBookings = array();
+    $acceptedBookings = array();
+    $rejectedBookings = array();
+    //selecting data from database 
+    $bookingQuery = "SELECT * FROM booking_test WHERE id='$c_id'";
 
-  $bookingResult = mysqli_query($connect, $bookingQuery);
-  while ($row = mysqli_fetch_assoc($bookingResult)) {
-    $date = date('Y-m-d', strtotime($row['booking_date']));
+    $bookingResult = mysqli_query($connect, $bookingQuery);
+    while ($row = mysqli_fetch_assoc($bookingResult)) {
+      $date = date('Y-m-d', strtotime($row['booking_date']));
 
 
-    if ($row['status'] == 'pending') {
-      $pendingBookings[] = $row;
-    } elseif ($row['status'] == 'Accepted') {
-      $acceptedBookings[] = $row;
-    } elseif ($row['status'] == 'rejected') {
-      $rejectedBookings[] = $row;
+      if ($row['status'] == 'pending') {
+        $pendingBookings[] = $row;
+      } elseif ($row['status'] == 'Accepted') {
+        $acceptedBookings[] = $row;
+      } elseif ($row['status'] == 'rejected') {
+        $rejectedBookings[] = $row;
+      }
+
     }
-
-  }
-  ?>
+    ?>
 
 
-  <div class="wrapper">
-    <div>
+
+    <div class='sidebar'>
       <?php include '../Component/c_sidebar.php'; ?>
 
     </div>
 
-    <div>
+    <div class='content'>
       <!-- Pending Bookings Table -->
       <table>
         <caption>
@@ -111,5 +138,7 @@
 
           </tr>
         <?php } ?>
+      </table>
     </div>
   </div>
+</body>
