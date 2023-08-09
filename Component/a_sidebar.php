@@ -8,10 +8,17 @@
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="../Css/c_sidebar.css" />
 </head>
+<style>
+   .sidebar {
+        position: sticky;
+        top: 0; 
+        z-index: 100; 
+    }
+</style>
 
 <body>
   <section class="container">
-    <div class="sidebar">
+    <div class="sidebar" >
       <header>
         <h2>Admin Panel</h2>
       </header>

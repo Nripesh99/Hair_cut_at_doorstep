@@ -22,6 +22,7 @@ if (!isset($_SESSION['email'])) {
         width: 20%;
         background-color: #f1f1f1;
         padding: 0px;
+        position:sticky;
     }
 
     .content {

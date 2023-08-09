@@ -51,7 +51,7 @@ if (!isset($_SESSION['email'])) {
         <?php
         include "../dbconfig.php";
         ?>
-        <div class='sidebar'>
+        <div class='sidebar' style="position: sticky;">
             <?php
             include '../Component/a_sidebar.php';
             ?>
