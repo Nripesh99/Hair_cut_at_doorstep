@@ -1,7 +1,7 @@
 <?php
 include '../dbconfig.php';
 session_start();
-// if (!isset($_SESSION['email']) && $_SESSION['usertype']== 'Admin' )  {
+// if (!isset($_SESSION['email']) || $_SESSION['usertype']== 'Admin' )  {
 //     header('location:../login.php');
 // }
 if (!isset($_SESSION['email'])) {

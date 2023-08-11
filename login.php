@@ -61,7 +61,7 @@
     require 'dbconfig.php';
 
     if (isset($_COOKIE['email'])) {
-        session_start();
+        // session_start();
         $_SESSION['email'] = $_COOKIE['email'];
         header('location:homepage.php');
     }
@@ -132,6 +132,14 @@
                         $_SESSION['usertype'] = $usertype;
                         header('location:../../hair_cut_at_doorstep/admin');
                         echo ("login success");
+
+                        if ($_POST['remember_me'] == 1 || $_POST['remember_me'] == 'on') {
+                            $hour = time() + 3600 * 24 * 30;
+                            setcookie('email', $email, $hour);
+                            setcookie('password', $password, $hour);
+                            setcookie('usertype', $usertype, $hour);
+                        }
+   
                     }
                 }
                 //user type  agent

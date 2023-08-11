@@ -22,8 +22,6 @@ include "dbconfig.php";
     <link rel="stylesheet" href="../hair_cut_at_doorstep/Css/style.css">
     <link rel="icon" href="./images/icon.png" type="image/icon type">
     <link rel="stylesheet" href="./Css/fontawesome/css/all_min.css">
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <link rel="stylesheet" href="header.css"> -->
     <style>
         .success-message,
         .failure-message {
@@ -52,7 +50,7 @@ include "dbconfig.php";
     <section class="about" id="about">
         <div class="row">
             <div class="col50">
-                <h2 class="titleText"><span>A</span>bout US</h2>
+                <h2 class="titleText" style="color:blue;">About US</h2>
                 <p>At Hair Salon at Doorstep, we bring the salon experience right to your doorstep, providing convenient
                     and professional hair services in the comfort of your own home. Our team of skilled and experienced
                     hairstylists is dedicated to delivering exceptional results, ensuring you look and feel your best
@@ -74,7 +72,7 @@ include "dbconfig.php";
     <!-- =============== Service Section===================================-->
     <section class="service" id="service">
         <div class="title">
-            <h2 class="titleText">Our<span>S</span>ervice</h2>
+            <h2 class="titleText">Our Service</h2>
             <p>Providing the best service </p>
         </div>
 
@@ -114,8 +112,8 @@ include "dbconfig.php";
     <!-- =============== Pricing Section ===================================-->
     <section class="price" id="price">
     <div class="title">
-        <h2 class="titleText">Our<span>P</span>ricing</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <h2 class="titleText">Our Pricing</h2>
+       
     </div>
     <div class="content">
         <?php
@@ -169,7 +167,7 @@ include "dbconfig.php";
     <section class="testimonials" id="testimonials">
         <div class="title white">
             <h2 class="titleText">They<span>S</span>aid About Us</h2>
-            <p>We are passionate about changing the way you think about laundry! </p>
+            <p>We are passionate about changing the way you think about hair_cut_at_doorstep! </p>
         </div>
         <div class="content">
             <div class="box">

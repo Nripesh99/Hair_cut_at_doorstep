@@ -23,12 +23,12 @@
         <h2>Admin Panel</h2>
       </header>
       <aside>
-        <a href="dashboard.php">Dashboard</a>
-        <a href="e_pending.php">Customer</a>
-        <a href="e_accepted.php">Agent</a>
-        <a href="e_completed.php">service</a>
-        <a href="e_completed.php">booking</a>
-        <a href="e_completed.php">Feedback</a>
+        <a href="a_dashboard.php">Dashboard</a>
+        <a href="a_customer.php">Customer</a>
+        <a href="a_agent.php">Agent</a>
+        <a href="a_service.php">service</a>
+        <a href="a_booking.php">booking</a>
+        <a href="a_feedback.php">Feedback</a>
         
         
 
