@@ -1,15 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION['email'])) {
-    header('location:login.php');
-}
-
-?>
-<?php
 include "dbconfig.php";
 
 // include_once "component/footer.php";
-
+session_start();
+include "session/c_session.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

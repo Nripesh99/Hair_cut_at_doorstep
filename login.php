@@ -53,8 +53,14 @@
 
     <?php
     session_start();
-    if (isset($_SESSION['email'])) {
+    if (isset($_SESSION['email']) && ($_SESSION['usertype']=='Customer')) {
         header('location:homepage.php');
+    }
+    else if (isset($_SESSION['email']) && ($_SESSION['usertype']=='Admin')) {
+        header('location:Admin\a_dashboard.php');
+    }
+    else if (isset($_SESSION['email']) && ($_SESSION['usertype']=='Agent')) {
+        header('location:employee\index.php');
     }
     ?>
     <?php
@@ -104,6 +110,7 @@
                         $_SESSION['email'] = $email;
                         $_SESSION['password'] = $password;
                         $_SESSION['usertype'] = $usertype;
+                        
 
                         if ($_POST['remember_me'] == 1 || $_POST['remember_me'] == 'on') {
                             $hour = time() + 3600 * 24 * 30;
@@ -114,6 +121,7 @@
 
                         //Redirect to new page
                         echo "Login succesfully";
+                        // echo $_SESSION['usertype'];
                         header("location:homepage.php");
                         exit();
                     } else {

@@ -1,13 +1,14 @@
 <?php
-include '../dbconfig.php';
-session_start();
-// if (!isset($_SESSION['email']) || $_SESSION['usertype']== 'Admin' )  {
-//     header('location:../login.php');
-// }
-if (!isset($_SESSION['email'])) {
-    header('location:../login.php');
-}
-
+// session_start();
+// // if (!isset($_SESSION['email']) || $_SESSION['usertype']== 'Admin' )  {
+    // //     header('location:../login.php');
+    // // }
+    // if (!isset($_SESSION['email'])) {
+        //     header('location:../login.php');
+        // }
+ include '../dbconfig.php';
+ session_start();
+include '../session/a_session.php';
 // Retrieve data from the customer table
 $customerQuery = "SELECT * FROM customer_register";
 $customerResult = mysqli_query($connect, $customerQuery);
