@@ -1,5 +1,7 @@
 <?php
-include '../hair_cut_at_doorstep/dbconfig.php';
+session_start();
+include 'dbconfig.php';
+include '../session/c_session.php';
 if (isset($_POST['contact'])) {
 
     $name = $_POST['Name'];

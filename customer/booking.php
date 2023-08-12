@@ -1,11 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['email'])) {
-    header('location:login.php');
-}
-// if (!isset($_SESSION['email']) || $_SESSION['usertype']== 'Customer' )  {
-//     header('location:login.php');
-// }
+include '../dbconfig.php';
+include '../session/c_session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +11,9 @@ if (!isset($_SESSION['email'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="../hair_cut_at_doorstep/Css/style.css">
-    <link rel="icon" href="./images/icon1.png" type="image/icon type">
-    <link rel="stylesheet" href="./Css/fontawesome/css/all_min.css">
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="icon" href="../images/icon1.png" type="image/icon type">
+    <link rel="stylesheet" href="../Css/fontawesome/css/all_min.css">
 
 </head>
 <style>
@@ -96,10 +92,7 @@ if (!isset($_SESSION['email'])) {
 <body>
 
     <?php
-    //Database connection
-    include './dbconfig.php';
-
-    include 'Component/header.php';
+    include '../Component/header.php';
 
     // Prepare and execute the SQL query
     $serviceQuery = "SELECT s_id, s_name, s_price, s_time, s_image FROM services";
@@ -127,7 +120,7 @@ if (!isset($_SESSION['email'])) {
             </div>
             <?php $a = $row['s_image']; ?>
             <div class="product-image">
-                <img src="<?php echo $a ?>" alt="Services">
+                <img src="../<?php echo $a ?>" alt="Services">
                 <a href="javascript:void(0);" onclick="confirmBooking(<?php echo $row['s_id']; ?>)" class="book-button">Book
                     Now</a>
             </div>
@@ -135,14 +128,14 @@ if (!isset($_SESSION['email'])) {
             <script>
                 function confirmBooking(serviceId) {
                     if (confirm("Are you sure you want to book this service?")) {
-                        window.location.href = "customer/booking_now.php?id=" + serviceId;
+                        window.location.href = "booking_now.php?id=" + serviceId;
                     }
                 }
             </script>
 
         </div>
     <?php } ?>
-    <?php include 'Component/footer.php'; ?>
+    <?php include '../Component/footer.php'; ?>
 </body>
 <footer>
     <?php ?>

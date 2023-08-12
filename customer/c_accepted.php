@@ -45,6 +45,8 @@
   <div class="wrapper">
     <?php
     include "../dbconfig.php";
+    session_start();
+    include "../session/c_session.php";
     ?>
     <div class='sidebar'>
       <?php

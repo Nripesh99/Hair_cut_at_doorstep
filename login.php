@@ -54,7 +54,7 @@
     <?php
     session_start();
     if (isset($_SESSION['email']) && ($_SESSION['usertype']=='Customer')) {
-        header('location:homepage.php');
+        header('location:customer\homepage.php');
     }
     else if (isset($_SESSION['email']) && ($_SESSION['usertype']=='Admin')) {
         header('location:Admin\a_dashboard.php');
@@ -122,7 +122,7 @@
                         //Redirect to new page
                         echo "Login succesfully";
                         // echo $_SESSION['usertype'];
-                        header("location:homepage.php");
+                        header("location:customer/homepage.php");
                         exit();
                     } else {
                         echo "Login failed";

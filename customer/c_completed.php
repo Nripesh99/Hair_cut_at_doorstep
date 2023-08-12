@@ -48,7 +48,9 @@
   <div class="wrapper">
 
     <?php
-    include "../dbconfig.php";
+  include "../dbconfig.php";
+  session_start();
+  include "../session/c_session.php";
 
 
     $c_id = $_GET['c_id'];

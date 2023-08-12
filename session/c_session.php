@@ -8,7 +8,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['password']) || $_SESSION['user
     $result = mysqli_fetch_assoc($sql);
 
     if (!$result || $_SESSION['password'] != $result['Password']) {
-        header("location: login.php");
+        header("location:../login.php");
         exit();
     }
 }

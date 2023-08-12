@@ -23,10 +23,13 @@
         </div>
         <div class="sidebar">
             <?php
+            include "../dbconfig.php";
+            session_start();
+            include "../session/c_session.php";
             include '../Component/c_sidebar.php';
             $a = $_SESSION['email'];
             // echo $a;
-            include '../dbconfig.php';
+            
             $email = $_SESSION['email'];
 
             $customerQuery = "SELECT Id, Name, Email, Mobile_no, location, Inside_valley FROM customer_register where Email='$email'";

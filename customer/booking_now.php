@@ -1,8 +1,7 @@
 <?php
+include "../dbconfig.php";
 session_start();
-if (!isset($_SESSION['email'])) {
-    header('location:../login.php');
-}
+include "../session/c_session.php";
 $email = $_SESSION['email'];
 echo "$email <br> ";
 $s_id = $_GET['id'];

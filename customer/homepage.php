@@ -1,9 +1,9 @@
 <?php
-include "dbconfig.php";
+include "../dbconfig.php";
 
 // include_once "component/footer.php";
 session_start();
-include "session/c_session.php";
+include "../session/c_session.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +13,9 @@ include "session/c_session.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="../hair_cut_at_doorstep/Css/style.css">
-    <link rel="icon" href="./images/icon.png" type="image/icon type">
-    <link rel="stylesheet" href="./Css/fontawesome/css/all_min.css">
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="icon" href="../images/icon.png" type="image/icon type">
+    <link rel="stylesheet" href="../Css/fontawesome/css/all_min.css">
     <style>
         .success-message,
         .failure-message {
@@ -25,7 +25,7 @@ include "session/c_session.php";
 
 
 </head>
-<?php include_once "component/header.php"; ?>
+<?php include_once "../Component/header.php"; ?>
 
 <body>
 
@@ -57,7 +57,7 @@ include "session/c_session.php";
             </div>
             <div class="col50">
                 <div class="imgBox">
-                    <img src="images/homebg1.jpeg" alt="">
+                    <img src="../images/homebg1.jpeg" alt="">
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@ include "session/c_session.php";
         <div class="content">
             <div class="box">
                 <div class="imgBox">
-                    <img src="./images/imagesicon1.png" alt="">
+                    <img src="../images/imagesicon1.png" alt="">
                 </div>
                 <div class="text">
                     <h3>Haircuts and Styling</h3>
@@ -83,7 +83,7 @@ include "session/c_session.php";
 
             <div class="box">
                 <div class="imgBox">
-                    <img src="./images/imagesicon2.png" alt="">
+                    <img src="../images/imagesicon2.png" alt="">
                 </div>
                 <div class="text">
                     <h3>Hair Coloring and Highlights</h3>
@@ -93,7 +93,7 @@ include "session/c_session.php";
 
             <div class="box">
                 <div class="imgBox">
-                    <img src="./images/imagesicon3.png" alt="">
+                    <img src="../images/imagesicon3.png" alt="">
                 </div>
                 <div class="text">
                     <h3>Hair Treatments and Care</h3>
@@ -126,7 +126,7 @@ include "session/c_session.php";
                 // Use the retrieved data to generate the HTML
                 echo '<div class="box">';
                 echo '    <div class="imgBox">';
-                echo '        <img src="' . $imagePath . '" alt="">';
+                echo '        <img src="../' . $imagePath . '" alt="">';
                 echo '    </div>';
                 echo '    <div class="text">';
                 echo '        <h3>' . $title . '</h3>';
@@ -166,7 +166,7 @@ include "session/c_session.php";
         <div class="content">
             <div class="box">
                 <div class="imgBox">
-                    <img src="./images/testi1.jpg" alt="">
+                    <img src="../images/testi1.jpg" alt="">
                 </div>
                 <div class="text">
                     <p>I must express my appreciation for the convenience of having a professional hairstylist come to
@@ -179,7 +179,7 @@ include "session/c_session.php";
 
             <div class="box">
                 <div class="imgBox">
-                    <img src="./images/testi2.jpg" alt="">
+                    <img src="../images/testi2.jpg" alt="">
                 </div>
                 <div class="text">
                     <p>I must express my appreciation for the convenience of having a professional hairstylist come to
@@ -192,7 +192,7 @@ include "session/c_session.php";
 
             <div class="box">
                 <div class="imgBox">
-                    <img src="./images/testi3.jpg" alt="">
+                    <img src="../images/testi3.jpg" alt="">
                 </div>
                 <div class="text">
                     <p>I must express my appreciation for the convenience of having a professional hairstylist come to
@@ -285,7 +285,7 @@ include "session/c_session.php";
     </script>
 
     <footer>
-        <?php include_once "component/footer.php" ?>
+        <?php include_once "../component/footer.php" ?>
     </footer>
 </body>
 
