@@ -1,8 +1,7 @@
 <?php
-session_start();
-if (!isset($_SESSION['email'])) {
-    header('location:../login.php');
-}
+include '../dbconfig.php';
+session_start();  
+include '../session/a_session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +48,7 @@ if (!isset($_SESSION['email'])) {
 <body>
     <div class='wrapper'>
         <?php
-        include "../dbconfig.php";
+        // include "../dbconfig.php";
         ?>
         <div class='sidebar'>
             <?php

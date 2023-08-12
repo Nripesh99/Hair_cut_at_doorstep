@@ -1,9 +1,7 @@
 <?php
-session_start();
-$a=$_SESSION['email'];
-// echo $a;
 include '../dbconfig.php';
-$email = $_SESSION['email'];
+session_start();  
+include '../session/e_session.php';
 
 $agentQuery = "SELECT a_Id, Name, Email, Mobile_no, location FROM agent_register where Email='$email'";
 $agentResult = mysqli_query($connect, $agentQuery);

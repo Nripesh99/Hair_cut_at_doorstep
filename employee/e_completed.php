@@ -1,9 +1,7 @@
 <?php
-session_start();
-if (!isset($_SESSION['email'])) {
-    header('location:../login.php');
-}
 include '../dbconfig.php';
+session_start();  
+include '../session/e_session.php';
 // include '../Component/e_sidebar.php';
 $today = date("Y-m-d");
 $email = $_SESSION['email'];

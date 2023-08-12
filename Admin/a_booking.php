@@ -1,8 +1,7 @@
 <?php
-session_start();
-if (!isset($_SESSION['email'])) {
-    header('location:../login.php');
-}
+include '../dbconfig.php';
+session_start();  
+include '../session/a_session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,12 +60,12 @@ if (!isset($_SESSION['email'])) {
         $acceptedBookings = array();
         $completedBookings = array();
         include '../dbconfig.php';
-
+        
         $bookingQuery1 = "SELECT * FROM booking_test where status='pending'";
         $bookingResult1 = mysqli_query($connect, $bookingQuery1);
         while ($row = mysqli_fetch_assoc($bookingResult1)) {
             $date = date('Y-m-d', strtotime($row['booking_date']));
-            if ($date == $today && $row['status'] == 'pending') {
+            if ( $row['status'] == 'pending') {
                 $pendingBookings[] = $row;
             }
         }

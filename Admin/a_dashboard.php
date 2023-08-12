@@ -2,7 +2,6 @@
 <?php
 session_start();
 include '../dbconfig.php';
- 
 include '../session/a_session.php';
 
 ?>
