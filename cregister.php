@@ -64,12 +64,13 @@ if (isset($_POST['Register'])) {
     $email = $_POST['email'];
     $mobile_no = $_POST['Mobile_no'];
     $password = $_POST['password'];
+    $hash_password=password_hash($password, PASSWORD_DEFAULT);
     $location = $_POST['location'];
     $booleanValue = isset($_POST['ring_road']) ? 1 : 0;
 
 
     $sql = "INSERT INTO customer_register ( Name, Email, Mobile_no, Password, Location, Inside_valley) 
-    VALUES('$name', '$email', '$mobile_no', '$password', '$location', '$booleanValue')";
+    VALUES('$name', '$email', '$mobile_no', '$hash_password', '$location', '$booleanValue')";
     $aa = mysqli_query($connect, $sql);
     if ($aa) {
          header("Location:login.php");

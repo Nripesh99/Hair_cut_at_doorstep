@@ -56,10 +56,11 @@ if (isset($_POST['Register'])) {
     $mobile_no = $_POST['Mobile_no'];
     $password = $_POST['password'];
     $location = $_POST['location'];
+    $hash_password=password_hash($password,PASSWORD_DEFAULT);
    
      echo "HEllo";
 
-    $sql = "INSERT INTO agent_register (Name, Email, Mobile_no, Password, Location) VALUES('$name', '$email', '$mobile_no', '$password', '$location')";
+    $sql = "INSERT INTO agent_register (Name, Email, Mobile_no, Password, Location) VALUES('$name', '$email', '$mobile_no', '$hash_password', '$location')";
     $aa = mysqli_query($connect, $sql);
     if ($aa) {
         //  header("Location:login.php");
