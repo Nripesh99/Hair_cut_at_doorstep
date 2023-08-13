@@ -1,6 +1,6 @@
 <?php
 include '../dbconfig.php';
-session_start();  
+session_start();
 include '../session/e_session.php';
 // include '../Component/e_sidebar.php';
 $today = date("Y-m-d");
@@ -55,6 +55,11 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
     table caption {
         font-weight: bold;
         margin-bottom: 10px;
+    }
+
+    body {
+        background: url('../images/bgimage3.jpg');
+        background-size: cover;
     }
 </style>
 

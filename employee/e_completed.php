@@ -1,6 +1,6 @@
 <?php
 include '../dbconfig.php';
-session_start();  
+session_start();
 include '../session/e_session.php';
 // include '../Component/e_sidebar.php';
 $today = date("Y-m-d");
@@ -33,7 +33,7 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
         width: 0%;
         background-color: #f1f1f1;
         padding: 0px;
-        position:sticky;
+        position: sticky;
     }
 
     .content {
@@ -56,6 +56,12 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
         font-weight: bold;
         margin-bottom: 10px;
     }
+
+    body {
+
+        background: url('../images/bgimage3.jpg');
+        background-size: cover;
+    }
 </style>
 
 
@@ -72,7 +78,7 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
         <div class="content">
             <!--For completed -->
             <table>
-                <caption>completed Bookings of  customer<h2> 
+                <caption>completed Bookings of customer<h2>
                     </h2>
                 </caption>
                 <tr>
