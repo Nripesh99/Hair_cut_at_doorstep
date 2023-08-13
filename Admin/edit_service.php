@@ -56,7 +56,7 @@
         $aa = mysqli_query($connect, $sql);
         if ($aa) {
             echo "Succsefully updated";
-            header('location:../admin/index.php');
+            header('location:../admin/a_dashboard.php');
         }
         else{
             echo "error occured";

@@ -65,10 +65,10 @@
         $mobile_no = $_POST['Mobile_no'];
         $password = $_POST['Password'];
         $location = $_POST['Location'];
-       
+       $password_hash=password_hash($password,PASSWORD_DEFAULT);
     
     
-        $sql = "UPDATE  agent_register SET Name='$name', Email='$email', Mobile_no='$mobile_no', Password='$password',location='$location'WHERE a_Id='$id' ";
+        $sql = "UPDATE  agent_register SET Name='$name', Email='$email', Mobile_no='$mobile_no', Password='$password_hash',location='$location'WHERE a_Id='$id' ";
         $aa = mysqli_query($connect, $sql);
         if ($aa) {
             echo "Succsefully updated";

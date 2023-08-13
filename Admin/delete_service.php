@@ -4,7 +4,7 @@
             $sql = "DELETE  FROM services WHERE s_id = $id";
             $result=mysqli_query($connect,$sql);
             echo"data deleted succesfully";
-            header('location:../admin/index.php');
+            header('location:../admin/a_dashboard.php');
        
 ?>            
 

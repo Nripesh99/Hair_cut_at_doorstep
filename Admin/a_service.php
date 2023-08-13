@@ -66,7 +66,7 @@ include '../session/a_session.php';
 <body>
     <div class='wrapper'>
 
-        <div class='sidebar'>
+        <div class='sidebar' style="position: sticky;">
             <?php
             include '../Component/a_sidebar.php';
             ?>
@@ -88,7 +88,7 @@ include '../session/a_session.php';
                     <th>Price</th>
                     <th>time_in_min</th>
                     <th>Image</th>
-
+                    <th colspan="2" style="text-align:center">Activity</th>
                 </tr>
                 <?php while ($row = mysqli_fetch_assoc($serviceResult)) { ?>
                     <tr>

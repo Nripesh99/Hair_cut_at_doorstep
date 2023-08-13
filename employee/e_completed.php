@@ -33,6 +33,7 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
         width: 0%;
         background-color: #f1f1f1;
         padding: 0px;
+        position:sticky;
     }
 
     .content {
@@ -60,7 +61,7 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
 
 <body>
     <div class="wrapper">
-        <div class="sidebar">
+        <div class="sidebar" style="position: sticky;">
             <?php include '../Component/e_sidebar.php'; ?>
         </div>
         <?php
