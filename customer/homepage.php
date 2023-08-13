@@ -77,7 +77,7 @@ include "../session/c_session.php";
                 </div>
                 <div class="text">
                     <h3>Haircuts and Styling</h3>
-                   
+
                 </div>
             </div>
 
@@ -87,7 +87,7 @@ include "../session/c_session.php";
                 </div>
                 <div class="text">
                     <h3>Hair Coloring and Highlights</h3>
-                  
+
                 </div>
             </div>
 
@@ -97,7 +97,7 @@ include "../session/c_session.php";
                 </div>
                 <div class="text">
                     <h3>Hair Treatments and Care</h3>
-                    
+
                 </div>
             </div>
         </div>
@@ -105,54 +105,54 @@ include "../session/c_session.php";
     <!-- =============== Service Section End===================================-->
     <!-- =============== Pricing Section ===================================-->
     <section class="price" id="price">
-    <div class="title">
-        <h2 class="titleText">Our Pricing</h2>
-       
-    </div>
-    <div class="content">
-        <?php
-        $serviceQuery = "SELECT s_id, s_name, s_price, s_time, s_image FROM services LIMIT 6";
-        $serviceResult = mysqli_query($connect, $serviceQuery);
+        <div class="title">
+            <h2 class="titleText">Our Pricing</h2>
 
-        if ($serviceResult->num_rows > 0) {
-            // Output data of each row
-            $counter = 0; // Initialize a counter variable
+        </div>
+        <div class="content">
+            <?php
+            $serviceQuery = "SELECT s_id, s_name, s_price, s_time, s_image FROM services LIMIT 6";
+            $serviceResult = mysqli_query($connect, $serviceQuery);
 
-            while ($row = $serviceResult->fetch_assoc()) {
-                $title = $row["s_name"];
-                $price = $row["s_price"];
-                $imagePath = $row["s_image"];
+            if ($serviceResult->num_rows > 0) {
+                // Output data of each row
+                $counter = 0; // Initialize a counter variable
+            
+                while ($row = $serviceResult->fetch_assoc()) {
+                    $title = $row["s_name"];
+                    $price = $row["s_price"];
+                    $imagePath = $row["s_image"];
 
-                // Use the retrieved data to generate the HTML
-                echo '<div class="box">';
-                echo '    <div class="imgBox">';
-                echo '        <img src="../' . $imagePath . '" alt="">';
-                echo '    </div>';
-                echo '    <div class="text">';
-                echo '        <h3>' . $title . '</h3>';
-                echo '        <p>Rs.' . $price . '</p>';
-                echo '    </div>';
-                echo '</div>';
+                    // Use the retrieved data to generate the HTML
+                    echo '<div class="box">';
+                    echo '    <div class="imgBox">';
+                    echo '        <img src="../' . $imagePath . '" alt="">';
+                    echo '    </div>';
+                    echo '    <div class="text">';
+                    echo '        <h3>' . $title . '</h3>';
+                    echo '        <p>Rs.' . $price . '</p>';
+                    echo '    </div>';
+                    echo '</div>';
 
-                $counter++; // Increment the counter
-
-                // Break the loop if the counter reaches 6
-                if ($counter >= 6) {
-                    break;
+                    $counter++; // Increment the counter
+            
+                    // Break the loop if the counter reaches 6
+                    if ($counter >= 6) {
+                        break;
+                    }
                 }
+            } else {
+                echo "No results found";
             }
-        } else {
-            echo "No results found";
-        }
 
-        // Close the database connection
-        mysqli_close($connect);
-        ?>
-    </div>
-    <div class="title">
-        <a href="#" class="btn">View All</a>
-    </div>
-</section>
+            // Close the database connection
+            mysqli_close($connect);
+            ?>
+        </div>
+        <div class="title">
+            <a href="#" class="btn">View All</a>
+        </div>
+    </section>
 
 
     <!-- =============== Pricing Section End===================================-->
@@ -265,6 +265,7 @@ include "../session/c_session.php";
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.status === 200) {
                         showSuccessMessage();
+                        clearFormFields(form); // Clear form fields on success
                     } else {
                         showFailureMessage();
                     }
@@ -282,6 +283,15 @@ include "../session/c_session.php";
         function showFailureMessage() {
             document.querySelector('.failure-message').style.display = 'block';
         }
+
+        function clearFormFields(form) {
+            // Assuming all form fields are input elements, you can reset their values
+            var inputFields = form.querySelectorAll('input');
+            inputFields.forEach(function (input) {
+                input.value = '';
+            });
+        }
+
     </script>
 
     <footer>

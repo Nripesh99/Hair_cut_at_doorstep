@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="../Css/booking_index.css">
+  <link rel="stylesheet" type="text/css" href="../Css/c_dashboard.css?=1">
 </head>
 <style>
   .wrapper {

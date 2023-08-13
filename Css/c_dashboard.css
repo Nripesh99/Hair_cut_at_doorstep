@@ -7,7 +7,8 @@
 }
 
 body {
-  background-color: #363949;
+  background-color: #eeeff3;
+
 }
 
 /* Dashboard Container */
@@ -93,4 +94,24 @@ a {
     margin-left: 0;
     margin-top: 1.5rem;
   }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #ffffff; 
+}
+
+table th {
+  background-color: #000; 
+}
+table td{
+  background-color: rgba(233, 112, 112, 0.521);
 }

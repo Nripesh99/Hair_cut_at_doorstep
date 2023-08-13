@@ -29,10 +29,10 @@ img {
             <input type="email" id="email" name="email" required><br><br>
 
             <label for="mobile_no">Mobile number:</label>
-            <input type="tel" id="Mobile_no" name="Mobile_no" required><br><br>
+            <input type="tel" id="Mobile_no" name="Mobile_no" required  minlength="10" maxlength="10"><br><br>
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
+            <input type="password" id="password" name="password" required  minlength="10" maxlength="25"><br><br>
 
             <label for="location">Location:</label>
             <input type="text" id="location" name="location" required><br><br>
