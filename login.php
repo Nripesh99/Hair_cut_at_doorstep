@@ -60,7 +60,7 @@
         header('location:Admin\a_dashboard.php');
     }
     else if (isset($_SESSION['email']) && ($_SESSION['usertype']=='Agent')) {
-        header('location:employee\index.php');
+        header('location:employee\e_dashboard.php');
     }
     ?>
     <?php
@@ -171,7 +171,7 @@
 
                         //Redirect to new page
                         echo "login success";
-                        header('location:../../hair_cut_at_doorstep/employee');
+                        header('location:employee/e_dashboard.php');
                         exit();
                     }
                 } else {
