@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Country | EDIT</title>
+    <link rel="stylesheet" href="../Css/aregister.css">
+
 </head>
 <body>
     <div class="content">
         <h2>Update Agent</h2>
         <hr>
         <a href="index.php">BACK</a>
+
 
         <?php
             include "../dbconfig.php";

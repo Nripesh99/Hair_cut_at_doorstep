@@ -126,7 +126,7 @@ include "../session/c_session.php";
                     // Use the retrieved data to generate the HTML
                     echo '<div class="box">';
                     echo '    <div class="imgBox">';
-                    echo '        <img src="../' . $imagePath . '" alt="">';
+                    echo '        <img src="../Admin/' . $imagePath . '" alt="">';
                     echo '    </div>';
                     echo '    <div class="text">';
                     echo '        <h3>' . $title . '</h3>';
@@ -252,45 +252,6 @@ include "../session/c_session.php";
     </section>
     <!-- =============== Contact Section End===================================-->
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            var form = event.target;
-            var formData = new FormData(form);
-
-            // Create an AJAX request
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'contact.php', true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        showSuccessMessage();
-                        clearFormFields(form); // Clear form fields on success
-                    } else {
-                        showFailureMessage();
-                    }
-                }
-            };
-
-            // Send the AJAX request with form data
-            xhr.send(formData);
-        });
-
-        function showSuccessMessage() {
-            document.querySelector('.success-message').style.display = 'block';
-        }
-
-        function showFailureMessage() {
-            document.querySelector('.failure-message').style.display = 'block';
-        }
-
-        function clearFormFields(form) {
-            // Assuming all form fields are input elements, you can reset their values
-            var inputFields = form.querySelectorAll('input');
-            inputFields.forEach(function (input) {
-                input.value = '';
-            });
-        }
 
     </script>
 

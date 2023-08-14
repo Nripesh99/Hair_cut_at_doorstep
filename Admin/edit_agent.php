@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Country | EDIT</title>
+    <link rel="stylesheet" href="../Css/aregister.css">
+
 </head>
-<body>
+<body class='container'>
     <div class="content">
         <h2>Update Agent</h2>
         <hr>

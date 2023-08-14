@@ -66,8 +66,8 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
 
 
 <body>
-    <div class="wrapper">
-        <div class="sidebar" style="position: sticky;">
+    <div class="wrapper" >
+        <div class="sidebar" style="position:sticky;">
             <?php include '../Component/e_sidebar.php'; ?>
         </div>
         <?php
@@ -96,7 +96,7 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
                     <th>Agent Id</th>
                 </tr>
                 <?php
-                $bookingQuery2 = "SELECT * FROM booking_test where status='completed' AND a_Id=$a_Id ";
+                $bookingQuery2 = "SELECT * FROM booking_test where status='completed' AND a_Id=$a_Id ORDER BY booking_date DESC";
                 $bookingResult2 = mysqli_query($connect, $bookingQuery2);
                 $i = 1;
                 while ($row2 = mysqli_fetch_assoc($bookingResult2)) {

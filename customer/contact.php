@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'dbconfig.php';
+include '../dbconfig.php';
 include '../session/c_session.php';
 if (isset($_POST['contact'])) {
 
@@ -13,11 +13,23 @@ if (isset($_POST['contact'])) {
     $aa = mysqli_query($connect, $sql);
     if ($aa) {
 
-        echo "WE would contact you soon";
+        echo 
+        '<script>
+            alert("WE will contact you soon");
+        </script>';
         
-        exit();
+        
+        echo '<script>
+            location.assign("homepage.php#contact");
+        </script>';
     } else {
-        echo "registeration failed !";
+        echo '<script>
+        alert(""registeration failed !";
+        ");
+                </script>';
+                echo '<script>
+                location.assign("homepage.php#contact");
+            </script>';
         exit();
     }
 }

@@ -107,7 +107,7 @@ include '../session/a_session.php';
                         <td class='image'>
                             <?php $a = $row['s_image']; ?>
                             <div class="product-image">
-                                <img src="../<?php echo $a ?>" alt="Services">
+                                <img src="<?php echo $a ?>" alt="Services">
                         </td>
                         <td><a class="btn" href="edit_service.php?id=<?php echo $row['s_id']; ?>">Edit</a></td>
                         <td><a class="btn" href="delete_service.php?id=<?php echo $row['s_id']; ?>">Delete</a></td>
