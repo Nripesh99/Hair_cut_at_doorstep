@@ -30,7 +30,8 @@
     }
 
     table th,
-    table td,th {
+    table td,
+    th {
       border: 1px solid #ddd;
       padding: 8px;
     }
@@ -135,8 +136,21 @@
             <td>
               <?php echo $row['status']; ?>
             </td>
-            <td><a class='btn'
-                href="delete_booking.php?id=<?php echo $row['b_id']; ?>&c_id=<?php echo $row['id']; ?>">Delete</a></td>
+            <!-- <td><a class='btn'
+                href="delete_booking.php?id=<?php echo $row['b_id']; ?>&c_id=<?php echo $row['id']; ?>">Delete</a></td> -->
+            <td>
+              <a class='btn' href=#
+                onclick="confirmDelete(<?php echo $row['b_id']; ?>, <?php echo $row['id']; ?>)">Delete</a>
+
+            </td>
+            <script>
+              function confirmDelete(bookingId, Id) {
+                if (confirm("Are you sure you want to Delete this booking")) {
+                  window.location.href = "delete_booking.php?id=" + bookingId + "&c_id=" + Id;
+                }
+              }
+            </script>
+
 
           </tr>
         <?php } ?>
