@@ -53,6 +53,8 @@
 
 <?php
 session_start();
+error_reporting(E_ERROR); // Display only errors, suppress warnings and notices
+
 if (isset($_SESSION['email']) && ($_SESSION['usertype'] == 'Customer')) {
     header('location:customer\homepage.php');
 } else if (isset($_SESSION['email']) && ($_SESSION['usertype'] == 'Admin')) {

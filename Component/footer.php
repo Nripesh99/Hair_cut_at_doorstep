@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +11,10 @@
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
-<footer class="footer ">
+
+    <footer class="footer ">
         <div class="footer_content">
             <a href="homepage.php#about" class="footer_logo">Hair-Cut </a>
             <span class="footer_description">Home Service</span>
@@ -30,25 +32,22 @@
         </div>
 
         <div class="footer_content">
-            <h3 class="footer_title">Information</h3>
+            <h3 class="footer_title"><a href="#" class="footer_link">Contact us</a></h3>
             <ul>
-                <li><a href="#" class="footer_link">Event</a></li>
-                <li><a href="#" class="footer_link">Contact us</a></li>
-                <li><a href="#" class="footer_link">Privacy policy</a></li>
-                <li><a href="#" class="footer_link">Terms of services</a></li>
+                <li class="footer_link1">01-4527553</li>
+                <li class="footer_link1">haircutatdoor@gmail.com</li>
             </ul>
         </div>
 
         <div class="footer_content">
-            <h3 class="footer_title">Adress</h3>
+            <h3 class="footer_title">Address</h3>
             <ul>
-                <li class="footer_link1">Newroad</li>
+                <li class="footer_link1">Lazimpat</li>
                 <li class="footer_link1">Kathmandu,Nepal</li>
-                <li class="footer_link1">01-4275158</li>
-                <li class="footer_link1">haircutatdoor@gmail.com</li>
+
             </ul>
         </div>
-        
+
     </footer>
 
     <div class="copyrightText">
@@ -56,11 +55,12 @@
         </p>
     </div>
 
-    <div class="arrow">
+    <!-- <div class="arrow">
         <a href="#" title="Back to Top"><span class="fas fa-angle-up"></span></a>
-    </div>
+    </div> -->
     <!-- =============== Footer Section End===================================-->
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

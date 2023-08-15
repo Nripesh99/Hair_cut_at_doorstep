@@ -1,6 +1,6 @@
-<?php 
+<?php
 include '../dbconfig.php';
-session_start();  
+session_start();
 include '../session/a_session.php';
 ?>
 <!DOCTYPE html>
@@ -11,12 +11,18 @@ include '../session/a_session.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="hair_cut_at_doorstep/Css/aregister.css">
+    <link rel="stylesheet" href="../Css/cregister.css">
 </head>
+<style>
+    img {
+        width: 150px;
+        height: auto;
+    }
+</style>
 
 <body class="container">
     <div class="logo">
-        <image src="logo.png"></image><br><br>
+        <image src="../images/logo1234.png"></image><br><br>
     </div>
     <p>Add services</p>
     <div>
@@ -24,10 +30,10 @@ include '../session/a_session.php';
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
 
-            <label for="email">Price:</label>
+            <label for="price">Price:</label>
             <input type="number" id="price" name="price" required><br><br>
 
-            <label for="mobile_no">time:</label>
+            <label for="Time">Time:</label>
             <input type="number" id="time" name="time" required><br><br>
 
             <label for="file">Upload file:</label>
@@ -39,6 +45,13 @@ include '../session/a_session.php';
             </div>
         </form>
     </div>
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 
 </html>
@@ -51,19 +64,18 @@ if (isset($_POST['Register'])) {
     $time = $_POST['time'];
     //for file
     $image_link = $_FILES['file'];
-    $file_upload_path = '../upload/';
+    $file_upload_path = 'upload/';
     $file_name = $image_link['name'];
     $file_temp = $image_link['tmp_name'];
 
-    $file=$file_upload_path.$file_name;
-    if(move_uploaded_file($file_temp, $file)){
+    $file = $file_upload_path . $file_name;
+    if (move_uploaded_file($file_temp, $file)) {
         echo "file uploaded";
 
-    }
-    else{
+    } else {
         echo "unable to upload file";
     }
-    
+
 
     $sql = "INSERT INTO services(s_name, s_price, s_time, s_image) VALUES('$name', '$price', '$time','$file' )";
     $aa = mysqli_query($connect, $sql);
@@ -73,7 +85,7 @@ if (isset($_POST['Register'])) {
         echo "Succesfully register";
         header('location:../admin/index.php');
         exit();
-        
+
     } else {
         echo "registeration failed !";
     }
