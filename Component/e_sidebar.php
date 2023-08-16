@@ -16,7 +16,7 @@
         <h2>Employee Panel</h2>
       </header>
       <aside>
-        <a href="dashboard.php">Dashboard</a>
+        <a href="e_dashboard.php">Dashboard</a>
         <a href="e_pending.php">Pending</a>
         <a href="e_accepted.php">Accepted</a>
         <a href="e_completed.php">Completed</a>

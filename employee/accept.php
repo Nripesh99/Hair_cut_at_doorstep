@@ -8,6 +8,6 @@ echo 'Hello';
 $status='accepted';
 $booking = "UPDATE  `booking_test` SET  status='Accepted', a_Id='$a_id' WHERE b_id='$id'";
 $aa = mysqli_query($connect, $booking);
-header('location:../employee/index_test.php');
+header('location:../employee/index.php');
 
 ?>

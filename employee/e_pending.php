@@ -104,6 +104,7 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
                     <th>Inside valley</th>
                     <th>Customer ID</th>
                     <th>Status</th>
+                    <th colspan="2">Action</th>
                 </tr>
                 <?php foreach ($pendingBookings as $i => $row) { ?>
                     <tr>
@@ -152,6 +153,9 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
                                 }
                             }
                         </script>
+                        <td><a class='btn'
+                                href="totalview.php?c_id=<?php echo $row['id']; ?>&b_id=<?php echo $row['b_id']; ?>&s_id=<?php echo $row['s_id']; ?>">View</a>
+                        </td>
 
                     </tr>
                 <?php } ?>
