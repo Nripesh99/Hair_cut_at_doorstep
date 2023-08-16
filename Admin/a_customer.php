@@ -44,6 +44,11 @@ include '../session/a_session.php';
         font-weight: bold;
         margin-bottom: 10px;
     }
+    table td {
+        color: #fff;
+        /* Change text color to white */
+        background-color: rgba(240, 143, 26, 0.223);
+    }
 </style>
 
 <body>

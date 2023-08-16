@@ -39,7 +39,11 @@ include '../session/a_session.php';
         padding: 8px;
         text-align: center;
     }
-
+    table td {
+        color: #fff;
+        /* Change text color to white */
+        background-color: rgba(240, 143, 26, 0.223);
+    }
     table caption {
         font-weight: bold;
         margin-bottom: 10px;

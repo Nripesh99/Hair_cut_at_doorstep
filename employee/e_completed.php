@@ -50,6 +50,12 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
     table td {
         border: 1px solid #ddd;
         padding: 8px;
+       
+    }
+    table td {
+        color: #fff;
+        /* Change text color to white */
+        background-color: rgba(240, 143, 26, 0.223);
     }
 
     table caption {
@@ -66,7 +72,7 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
 
 
 <body>
-    <div class="wrapper" >
+    <div class="wrapper">
         <div class="sidebar" style="position:sticky;">
             <?php include '../Component/e_sidebar.php'; ?>
         </div>

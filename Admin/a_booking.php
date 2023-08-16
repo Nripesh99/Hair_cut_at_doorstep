@@ -44,6 +44,11 @@ include '../session/a_session.php';
         font-weight: bold;
         margin-bottom: 10px;
     }
+    table td {
+        color: #fff;
+        /* Change text color to white */
+        background-color: rgba(240, 143, 26, 0.323);
+    }
  
 </style>
 
@@ -149,6 +154,7 @@ include '../session/a_session.php';
                     <th>Inside valley</th>
                     <th>Customer ID</th>
                     <th>Status</th>
+                    <th>Agent id</th>
                 </tr>
                 <?php foreach ($acceptedBookings as $i => $row1) { ?>
                     <tr>
