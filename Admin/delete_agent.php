@@ -7,7 +7,7 @@ $bookingCountRow = mysqli_fetch_assoc($bookingCheckResult);
 $bookingCount = $bookingCountRow['booking_count'];
 
 if ($bookingCount > 0) {
-    echo "Cannot delete the service because there are active bookings.";
+    echo "Cannot delete the agent because there are active bookings.";
     echo '<a href="a_agent.php">Go back to Service</a>';
 }
 else{
