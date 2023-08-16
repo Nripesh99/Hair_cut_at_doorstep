@@ -43,8 +43,8 @@
                             value="<?php echo $row['Mobile_no']; ?>">
                         <div class="form-input">
                             <label for="country_code">Password: </label>
-                            <input type="text" name="Password" 
-                            value="<?php echo $row['Password']; ?>">
+                            <input type="password" name="Password" required
+                            value="">
                         </div>
                         <div class="form-input">
                             <label for="country_code">Location: </label>

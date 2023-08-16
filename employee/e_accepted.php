@@ -118,6 +118,8 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
                     <th>Inside valley</th>
                     <th>Customer ID</th>
                     <th>Status</th>
+                    <th>Agent id</th>
+                    <th>Action</th>
                 </tr>
                 <?php foreach ($acceptedBookings as $i => $row1) { ?>
                     <tr>

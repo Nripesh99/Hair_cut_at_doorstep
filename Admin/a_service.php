@@ -42,7 +42,7 @@ include '../session/a_session.php';
     table td {
         color: #fff;
         /* Change text color to white */
-        background-color: rgba(240, 143, 26, 0.223);
+        background-color: rgba(240, 143, 26, 0.423);
     }
     table caption {
         font-weight: bold;
