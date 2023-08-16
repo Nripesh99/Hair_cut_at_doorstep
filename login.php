@@ -35,8 +35,8 @@
 
         <input type="submit" name="login" value="login"></input><br><br>
 
-        <label for="remember_me">Remember Me</label>
-        <input type="checkbox" id="remember_me" name="remember_me">
+        <!-- <label for="remember_me">Remember Me</label>
+        <input type="checkbox" id="remember_me" name="remember_me"> -->
         <br>
         <div class="registration">
             Don't have an Account? <a href="cregister.php">
@@ -69,7 +69,7 @@ require 'dbconfig.php';
 if (isset($_COOKIE['email'])) {
     // session_start();
     $_SESSION['email'] = $_COOKIE['email'];
-    header('location:homepage.php');
+    header('location:customer\homepage.php');
 }
 
 
@@ -104,31 +104,31 @@ if (isset($_POST['login'])) {
                 $sql = "SELECT * FROM customer_register where email='$email'  limit 1";
                 $aa = mysqli_query($connect, $sql);
                 $row = mysqli_fetch_array($aa);
-                    if (password_verify($password, $row['Password'])) {
-                        $user = $aa->fetch_assoc();
-                            // session_start();
-                            $_SESSION['email'] = $email;
-                            $_SESSION['password'] =$row['Password'];
-                            $_SESSION['usertype'] = $usertype;
+                if (password_verify($password, $row['Password'])) {
+                    $user = $aa->fetch_assoc();
+                    // session_start();
+                    $_SESSION['email'] = $email;
+                    $_SESSION['password'] = $row['Password'];
+                    $_SESSION['usertype'] = $usertype;
 
 
-                            if ($_POST['remember_me'] == 1 || $_POST['remember_me'] == 'on') {
-                                $hour = time() + 3600 * 24 * 30;
-                                setcookie('email', $email, $hour);
-                                setcookie('password', $password, $hour);
-                                setcookie('usertype', $usertype, $hour);
-                            }
-
-                            //Redirect to new page
-                            echo "Login succesfully";
-                            // echo $_SESSION['usertype'];
-                            header("location:customer/homepage.php");
-                            exit();
-                                            } else {
-                        echo "Login failed";
+                    if ($_POST['remember_me'] == 1 || $_POST['remember_me'] == 'on') {
+                        $hour = time() + 3600 * 24 * 30;
+                        setcookie('email', $email, $hour);
+                        setcookie('password', $row['Password'], $hour);
+                        setcookie('usertype', $usertype, $hour);
                     }
+
+                    //Redirect to new page
+                    echo "Login succesfully";
+                    // echo $_SESSION['usertype'];
+                    header("location:customer/homepage.php");
+                    exit();
+                } else {
+                    echo "Login failed";
                 }
-                        //user type admin 
+            }
+            //user type admin 
             else if ($usertype == 'Admin') {
                 include 'dbconfig.php';
                 $sql = "SELECT * FROM admin_register where email='$email' limit 1";
@@ -144,12 +144,11 @@ if (isset($_POST['login'])) {
                     if ($_POST['remember_me'] == 1 || $_POST['remember_me'] == 'on') {
                         $hour = time() + 3600 * 24 * 30;
                         setcookie('email', $email, $hour);
-                        setcookie('password', $password, $hour);
+                        setcookie('password', $row['Password'], $hour);
                         setcookie('usertype', $usertype, $hour);
                     }
 
-                }
-                else{
+                } else {
                     echo "login fail";
                 }
             }
@@ -168,7 +167,7 @@ if (isset($_POST['login'])) {
                     if ($_POST['remember_me'] == 1 || $_POST['remember_me'] == 'on') {
                         $hour = time() + 3600 * 24 * 30;
                         setcookie('email', $email, $hour);
-                        setcookie('password', $password, $hour);
+                        setcookie('password', $row['Password'], $hour);
                         setcookie('usertype', $usertype, $hour);
                     }
 
@@ -176,16 +175,10 @@ if (isset($_POST['login'])) {
                     echo "login success";
                     header('location:employee/e_dashboard.php');
                     exit();
+                } else {
+                    echo "login fail";
                 }
-            } else {
-                echo "login fail";
             }
-
-            //  }
-            // else{
-            //     echo"Enter user type";
-            // }
-
         }
     }
 }
