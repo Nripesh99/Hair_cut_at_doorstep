@@ -39,6 +39,11 @@
     font-weight: bold;
     margin-bottom: 10px;
   }
+  table td {
+        color: #fff;
+        /* Change text color to white */
+        background-color: rgba(0, 0, 0, 0.523);
+    }
 </style>
 
 <body>

@@ -24,6 +24,11 @@
     width: 80%;
     padding: 30px;
   }
+  table td {
+        color: #fff;
+        /* Change text color to white */
+        background-color: rgba(0, 0, 0, 0.523);
+    }
 
   table {
     width: 100%;

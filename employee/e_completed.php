@@ -55,7 +55,7 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
     table td {
         color: #fff;
         /* Change text color to white */
-        background-color: rgba(240, 143, 26, 0.423);
+        background-color: rgba(0, 0, 0, 0.423);
     }
 
     table caption {

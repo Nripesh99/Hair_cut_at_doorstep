@@ -37,6 +37,11 @@
         border: 1px solid #ddd;
         padding: 8px;
     }
+    table td {
+        color: #fff;
+        /* Change text color to white */
+        background-color: rgba(0, 0, 0, 0.523);
+    }
 
     table caption {
         font-weight: bold;
