@@ -39,12 +39,12 @@
                         </div>
                         <div class="form-input">
                             <label for="country_code">Mobile_no: </label>
-                            <input type="text" name="Mobile_no" 
+                            <input type="text" name="Mobile_no" minlength="10" maxlength="10"
                             value="<?php echo $row['Mobile_no']; ?>">
-                        <div class="form-input">
+                        <!-- <div class="form-input">
                             <label for="country_code">Password: </label>
-                            <input type="password" name="Password" required
-                            value="">
+                            <input type="password" name="Password" readonly
+                            value=""> -->
                         </div>
                         <div class="form-input">
                             <label for="country_code">Location: </label>
@@ -65,12 +65,12 @@
         $name = $_POST['Name'];
         $email = $_POST['Email'];
         $mobile_no = $_POST['Mobile_no'];
-        $password = $_POST['Password'];
         $location = $_POST['Location'];
+        $password = $_POST['Password'];
        $password_hash=password_hash($password,PASSWORD_DEFAULT);
     
     
-        $sql = "UPDATE  agent_register SET Name='$name', Email='$email', Mobile_no='$mobile_no', Password='$password_hash',location='$location'WHERE a_Id='$id' ";
+        $sql = "UPDATE  agent_register SET Name='$name', Email='$email', Mobile_no='$mobile_no',location='$location'WHERE a_Id='$id' ";
         $aa = mysqli_query($connect, $sql);
         if ($aa) {
             echo "Succsefully updated";

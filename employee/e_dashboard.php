@@ -30,11 +30,10 @@ $complete_booking = mysqli_fetch_array(mysqli_query($connect, "SELECT COUNT(*) F
     <link rel="stylesheet" type="text/css" href="../Css/e_dashboard.css">
 </head>
 <style>
-body {
-background: url('../images/bgimage3.jpg');
-background-size:cover;
-}
-
+    body {
+        background: url('../images/bgimage3.jpg');
+        background-size: cover;
+    }
 </style>
 
 <body>
@@ -81,18 +80,16 @@ background-size:cover;
                             ?>
                         </a>
                     </center>
-                    <!-- </div>
+                </div>
                 <div class="card">
                     <center>
-                        <a href="c_rejected.php?a_id=<?php echo $a_row['a_Id']; ?>">
-                            <?php
-                            echo '<h3>Rejected: <br> ' . $reject_booking[0] . '</h3>';
-                            ?>
+                        <a href="e_changepassword.php?a_id=<?php echo $a_row['a_Id']; ?>">
+                        <h3>Change Password</h3>
                         </a>
                     </center>
-                </div> -->
                 </div>
             </div>
+        </div>
     </section>
 </body>
 
