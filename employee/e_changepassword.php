@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Update the password in the database
         $update_query = "UPDATE agent_register SET Password = '$hashed_new_password' WHERE a_Id = $a_id";
         mysqli_query($connect, $update_query);
-
+        $_SESSION['password']=$hashed_new_password;
         // Password changed successfully
         echo "Password changed successfully!";
     } else {

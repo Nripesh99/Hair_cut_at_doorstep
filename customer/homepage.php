@@ -160,20 +160,20 @@ include "../session/c_session.php";
 
     <section class="testimonials" id="testimonials">
         <div class="title white">
-            <h2 class="titleText">They<span>S</span>aid About Us</h2>
+            <h2 style="color:black;">They<span>S</span>aid About Us</h2>
             <p>We are passionate about changing the way you think about hair_cut_at_doorstep! </p>
         </div>
         <div class="content">
             <div class="box">
                 <div class="imgBox">
-                    <img src="../images/testi1.jpg" alt="">
+                    <img src="../images/testi4.jpg" alt="">
                 </div>
                 <div class="text">
                     <p>I must express my appreciation for the convenience of having a professional hairstylist come to
                         my home. It eliminated the need to travel to a salon and provided a salon-like experience right
                         at my doorstep, with the stylist arriving punctually and fully equipped with all the necessary
                         tools and products.</p>
-                    <h3>Rita Subedi</h3>
+                    <h3>Nripesh</h3>
                 </div>
             </div>
 
@@ -186,7 +186,7 @@ include "../session/c_session.php";
                         my home. It eliminated the need to travel to a salon and provided a salon-like experience right
                         at my doorstep, with the stylist arriving punctually and fully equipped with all the necessary
                         tools and products.</p>
-                    <h3>Niraj Shrestha</h3>
+                    <h3>Niraj </h3>
                 </div>
             </div>
 
@@ -199,7 +199,7 @@ include "../session/c_session.php";
                         my home. It eliminated the need to travel to a salon and provided a salon-like experience right
                         at my doorstep, with the stylist arriving punctually and fully equipped with all the necessary
                         tools and products.</p>
-                    <h3>Sita Maharjan</h3>
+                    <h3>Sami</h3>
                 </div>
             </div>
         </div>
