@@ -22,7 +22,7 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="index.css"> -->
 </head>
 <style>
     .wrapper {
@@ -34,6 +34,7 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
         background-color: #f1f1f1;
         padding: 0px;
         position: sticky;
+        top:0;
     }
 
     .content {
@@ -50,7 +51,7 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
     table td {
         border: 1px solid #ddd;
         padding: 8px;
-       
+        background-color: white;
     }
     table td {
         color: #fff;
