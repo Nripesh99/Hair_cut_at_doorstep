@@ -75,6 +75,7 @@ include '../session/a_session.php';
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
+                    <th>Location</th>
                     <th colspan="2" style="text-align:center">Activity</th>
                 </tr>
                 <?php while ($row = mysqli_fetch_assoc($agentResult)) { ?>
@@ -90,6 +91,9 @@ include '../session/a_session.php';
                         </td>
                         <td>
                             <?php echo $row['Mobile_no']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['location']; ?>
                         </td>
                         <td><a class='btn' href="edit_agent.php?id=<?php echo $row['a_Id']; ?>">Edit</a></td>
                         <!-- <td><a href="view.php?id=<?php echo $row['a_Id']; ?>">View</a></td> -->
