@@ -66,6 +66,19 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
         background: url('../images/bgimage3.jpg');
         background-size: cover;
     }
+    .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #447588;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    text-decoration-color: black;
+  }
+  
+  .btn:hover {
+    background-color: #cdd1d4;
+  }
 </style>
 
 <body>

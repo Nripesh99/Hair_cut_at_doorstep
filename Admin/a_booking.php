@@ -78,7 +78,7 @@ include '../session/a_session.php';
         <div class='content'>
             <table>
                 <!-- for pending booking-->
-                <caption>Pending Bookings</caption>
+                <h1 style="color:wheat;">Pending Bookings</h1>
                 <tr>
                     <th>S.no</th>
                     <th>Booking ID</th>
@@ -141,7 +141,7 @@ include '../session/a_session.php';
             }
             ?>
             <table>
-                <caption>Accepted Bookings</caption>
+            <h1 style="color:wheat;">Accepted Bookings</h1>
                 <tr>
                     <th>S.no</th>
                     <th>Booking ID</th>
@@ -199,7 +199,7 @@ include '../session/a_session.php';
             </table>
             <!--For completed -->
             <table>
-                <caption>completed Bookings</caption>
+            <h1 style="color:wheat;">Completed Bookings</h1>
                 <tr>
                     <th>S.no</th>
                     <th>Booking ID</th>
@@ -280,7 +280,7 @@ include '../session/a_session.php';
 
             <table>
                 <!-- for pending booking-->
-                <caption>Rejected Bookings</caption>
+                <h1 style="color:wheat;">Rejected Bookings</h1>
                 <tr>
                     <th>S.no</th>
                     <th>Booking ID</th>

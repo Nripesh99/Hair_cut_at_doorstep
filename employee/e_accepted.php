@@ -31,11 +31,11 @@ $bookingResult = mysqli_query($connect, $bookingQuery);
         display: flex;
     }
 
-    .sidebar {
+    /* .sidebar {
         width: 20%;
         background-color: #f1f1f1;
         padding: 0px;
-    }
+    } */
 
     .content {
         width: 80%;
