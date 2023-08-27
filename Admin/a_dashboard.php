@@ -5,6 +5,40 @@ include '../dbconfig.php';
 include '../session/a_session.php';
 
 ?>
+    <?php
+   //CHanging status from pending to rejected if the booking date and todays date is not same
+    
+    
+    // Get today's date
+    $today = date('Y-m-d');
+
+    // Query to retrieve bookings
+    $sql = "SELECT * FROM booking_test";
+    $result = mysqli_query($connect, $sql);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $bookingId = $row['b_id'];
+            $date = date('Y-m-d', strtotime($row['booking_date']));
+            $status = $row['status'];
+
+            // Check if booking date is not equal to today's date
+            if ($date != $today && $status == 'pending') {
+                // Update the status to "rejected"
+                $updateSql = "UPDATE booking_test SET status = 'rejected' WHERE b_id = $bookingId";
+                $updateResult = mysqli_query($connect, $updateSql);
+
+                if ($updateResult) {
+                    echo "";
+                } else {
+                    echo "Error updating status for Booking ID: $bookingId.<br>";
+                }
+            }
+        }
+    } else {
+        echo "No bookings found.";
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
